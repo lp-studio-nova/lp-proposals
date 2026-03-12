@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{CLIENT_NAME}} 様 LP制作ご提案</title>
+    <!-- Google Fonts for clean modern typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="page-layout">
+
+        <!-- ==============================================
+             LEFT COLUMN / HEADER
+             ============================================== -->
+        <header class="header-sidebar">
+            <div class="header-inner">
+                <div class="badge">PROPOSAL</div>
+
+                <h1 class="hero-title">{{CLIENT_NAME}} 様<br>LP制作ご提案</h1>
+                <p class="hero-subtitle">{{SERVICE_TYPE}}向けLP構成案のイメージです。</p>
+                <p class="hero-note">This page is a sample structure proposal for your landing page.</p>
+
+                <div class="header-nav">
+                    <ul>
+                        <li><a href="#target">1. 想定ターゲット</a></li>
+                        <li><a href="#structure">2. LP構成案</a></li>
+                        <li><a href="#flow">3. LP制作の進め方</a></li>
+                        <li><a href="#schedule">4. 制作期間</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <!-- ==============================================
+             RIGHT COLUMN / MAIN CONTENT
+             ============================================== -->
+        <main class="content-main">
+
+            <!-- Section 1: 想定ターゲット -->
+            <section id="target" class="proposal-card">
+                <h2 class="section-title"><span class="section-num">1</span> 想定ターゲット</h2>
+                <div class="card-content">
+                    <p class="target-text">{{TARGET}}</p>
+                    <!-- {{UNIQUE_POINT}} などを補足的に置く用 -->
+                    <div class="unique-point-box">
+                        <span class="up-label">訴求ポイント</span>
+                        <p>{{UNIQUE_POINT}}</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 2: LP構成案 -->
+            <section id="structure" class="proposal-card">
+                <h2 class="section-title"><span class="section-num">2</span> LP構成案</h2>
+                <div class="card-content">
+                    <p class="section-desc">LPの成果（CV獲得）を最大化させるための推奨セクション構成です。</p>
+                    <ul class="structure-list">
+                        <li>
+                            <div class="struct-icon">1</div>
+                            <div class="struct-text">ファーストビュー</div>
+                        </li>
+                        <li>
+                            <div class="struct-icon">2</div>
+                            <div class="struct-text">サービス紹介</div>
+                        </li>
+                        <li>
+                            <div class="struct-icon">3</div>
+                            <div class="struct-text">強み</div>
+                        </li>
+                        <li>
+                            <div class="struct-icon">4</div>
+                            <div class="struct-text">実績</div>
+                        </li>
+                        <li>
+                            <div class="struct-icon">5</div>
+                            <div class="struct-text">お客様の声</div>
+                        </li>
+                        <li>
+                            <div class="struct-icon">6</div>
+                            <div class="struct-text">CTA (行動喚起)</div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Section 3: LP制作の進め方 -->
+            <section id="flow" class="proposal-card">
+                <h2 class="section-title"><span class="section-num">3</span> LP制作の進め方</h2>
+                <div class="card-content">
+                    <ol class="flow-list">
+                        <li>
+                            <strong>ヒアリング</strong>
+                            <p>サービス内容、ターゲット、LPの目的を確認します。</p>
+                        </li>
+                        <li>
+                            <strong>構成設計</strong>
+                            <p>LPの成果を意識したセクション構成を設計します。</p>
+                        </li>
+                        <li>
+                            <strong>デザイン</strong>
+                            <p>ターゲットに合わせた視認性の高いデザインを制作します。</p>
+                        </li>
+                        <li>
+                            <strong>コーディング</strong>
+                            <p>HTML / CSSで軽量で高速なLPを制作します。</p>
+                        </li>
+                        <li>
+                            <strong>修正対応</strong>
+                            <p>公開前に細かな調整や修正を行います。</p>
+                        </li>
+                        <li>
+                            <strong>納品</strong>
+                            <p>HTML一式またはサーバーアップロードで納品可能です。</p>
+                        </li>
+                    </ol>
+                </div>
+            </section>
+
+            <!-- Section 4: 制作期間 -->
+            <section id="schedule" class="proposal-card">
+                <h2 class="section-title"><span class="section-num">4</span> 制作期間</h2>
+                <div class="card-content">
+                    <div class="schedule-box">
+                        <div class="schedule-label">LP制作</div>
+                        <div class="schedule-value">3〜7日程度</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 5: CTA -->
+            <section class="proposal-card cta-card">
+                <div class="card-content text-center">
+                    <p class="cta-message">LP制作のご相談お待ちしております。</p>
+                    <!-- ここにクラウドワークスのメッセージリンクなどを貼る想定 -->
+                    <a href="#" class="btn btn-primary">ご相談・お見積りはこちら</a>
+                </div>
+            </section>
+
+            <!-- Footer (営業導線) -->
+            <footer class="proposal-footer">
+                <p class="footer-note">※本ページはLP構成提案のイメージです。<br>実際のデザインやコンテンツはヒアリング結果をもとに最適化いたします。</p>
+                <div class="portfolio-link-box">
+                    <span>制作ポートフォリオ</span>
+                    <a href="https://lp-studio-nova.github.io/lp-studio-nova-portfolio/" target="_blank"
+                        rel="noopener noreferrer">
+                        lp-studio-nova.github.io/lp-studio-nova-portfolio/
+                    </a>
+                </div>
+                <p class="copyright">&copy; LP Studio Nova</p>
+            </footer>
+
+        </main>
+    </div>
+
+</body>
+
+</html>

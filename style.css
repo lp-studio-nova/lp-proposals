@@ -1,0 +1,442 @@
+/* =========================================================================
+   Base Variables & Core
+   ========================================================================= */
+:root {
+    --color-bg-base: #F8F9FA;
+    --color-card-bg: #FFFFFF;
+
+    --color-text-main: #1F2937;
+    --color-text-mutated: #6B7280;
+
+    /* 信頼感のあるネイビーブルーをアクセントカラーに */
+    --color-primary: #2563EB;
+    /* サブカラーとして淡いブルー */
+    --color-primary-light: #EFF6FF;
+
+    --color-border: #E5E7EB;
+
+    --font-jp: 'Noto Sans JP', sans-serif;
+    --font-en: 'Inter', sans-serif;
+
+    --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-jp);
+    color: var(--color-text-main);
+    background-color: var(--color-bg-base);
+    line-height: 1.6;
+    letter-spacing: 0.02em;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: #1D4ED8;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* =========================================================================
+   Layout: 2-Column Desktop
+   ========================================================================= */
+.page-layout {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 100vh;
+}
+
+.header-sidebar {
+    width: 380px;
+    flex-shrink: 0;
+    padding: 60px 40px;
+    background-color: var(--color-bg-base);
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.content-main {
+    flex: 1;
+    padding: 60px 40px 60px 20px;
+    min-width: 0;
+    /* Prevents flexbox text overflow issues */
+}
+
+/* =========================================================================
+   Left: Hero Sidebar
+   ========================================================================= */
+.badge {
+    display: inline-block;
+    font-family: var(--font-en);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    padding: 6px 12px;
+    background-color: var(--color-primary-light);
+    color: var(--color-primary);
+    border-radius: 4px;
+    margin-bottom: 24px;
+}
+
+.hero-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 20px;
+    color: #111827;
+}
+
+.hero-subtitle {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--color-text-main);
+    margin-bottom: 12px;
+}
+
+.hero-note {
+    font-family: var(--font-en);
+    font-size: 0.85rem;
+    color: var(--color-text-mutated);
+    margin-bottom: 40px;
+}
+
+.header-nav ul {
+    border-top: 1px solid var(--color-border);
+    padding-top: 24px;
+}
+
+.header-nav li {
+    margin-bottom: 12px;
+}
+
+.header-nav a {
+    color: var(--color-text-mutated);
+    font-size: 0.95rem;
+    display: block;
+    padding: 8px 0;
+}
+
+.header-nav a:hover {
+    color: var(--color-primary);
+    padding-left: 8px;
+    /* subtle slide effect */
+}
+
+/* =========================================================================
+   Right: Proposal Cards
+   ========================================================================= */
+.proposal-card {
+    background-color: var(--color-card-bg);
+    border-radius: 12px;
+    padding: 40px;
+    margin-bottom: 32px;
+    box-shadow: var(--shadow-card);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.section-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid var(--color-bg-base);
+    padding-bottom: 16px;
+}
+
+.section-num {
+    font-family: var(--font-en);
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--color-primary);
+    background-color: var(--color-primary-light);
+    width: 32px;
+    height: 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    margin-right: 12px;
+}
+
+.card-content {
+    color: var(--color-text-main);
+}
+
+.section-desc {
+    margin-bottom: 20px;
+    color: var(--color-text-mutated);
+    font-size: 0.95rem;
+}
+
+/* Specific Content Types */
+.target-text {
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.8;
+    margin-bottom: 24px;
+}
+
+.unique-point-box {
+    background-color: var(--color-bg-base);
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid var(--color-primary);
+}
+
+.up-label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 8px;
+}
+
+/* Structure List Details */
+.structure-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.structure-list li {
+    display: flex;
+    align-items: center;
+    background-color: var(--color-bg-base);
+    padding: 16px 20px;
+    border-radius: 8px;
+}
+
+.struct-icon {
+    font-family: var(--font-en);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-text-mutated);
+    border: 1px solid var(--color-border);
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-right: 12px;
+    background-color: var(--color-card-bg);
+}
+
+.struct-text {
+    font-weight: 500;
+}
+
+/* Flow List */
+.flow-list {
+    position: relative;
+    padding-left: 20px;
+}
+
+.flow-list::before {
+    content: '';
+    position: absolute;
+    left: 2px;
+    top: 5px;
+    bottom: 20px;
+    width: 2px;
+    background-color: var(--color-border);
+}
+
+.flow-list li {
+    position: relative;
+    margin-bottom: 24px;
+    padding-left: 24px;
+}
+
+.flow-list li:last-child {
+    margin-bottom: 0;
+}
+
+.flow-list li::before {
+    content: '';
+    position: absolute;
+    left: -24px;
+    top: 6px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--color-card-bg);
+    border: 2px solid var(--color-primary);
+    z-index: 1;
+}
+
+.flow-list strong {
+    display: block;
+    font-size: 1.05rem;
+    color: var(--color-primary);
+    margin-bottom: 4px;
+}
+
+.flow-list p {
+    font-size: 0.95rem;
+    color: var(--color-text-mutated);
+}
+
+/* Schedule */
+.schedule-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 32px;
+    background-color: var(--color-primary-light);
+    border-radius: 8px;
+    border: 1px dashed rgba(37, 99, 235, 0.3);
+}
+
+.schedule-label {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.schedule-value {
+    font-family: var(--font-jp);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-text-main);
+}
+
+/* CTA */
+.cta-card {
+    background-color: var(--color-primary);
+    color: var(--color-card-bg);
+    margin-top: 48px;
+}
+
+.cta-message {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+    color: var(--color-card-bg);
+}
+
+.btn {
+    display: inline-block;
+    padding: 16px 32px;
+    border-radius: 50px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--color-card-bg);
+    color: var(--color-primary);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-bg-base);
+    color: var(--color-primary);
+}
+
+/* =========================================================================
+   Footer (Sales Path)
+   ========================================================================= */
+.proposal-footer {
+    margin-top: 60px;
+    padding-top: 40px;
+    border-top: 1px solid var(--color-border);
+}
+
+.footer-note {
+    font-size: 0.9rem;
+    color: var(--color-text-mutated);
+    margin-bottom: 24px;
+}
+
+.portfolio-link-box {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #F3F4F6;
+    /* Slighly darker gray to differentiate from main area */
+    border-radius: 8px;
+    margin-bottom: 32px;
+}
+
+.portfolio-link-box span {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--color-text-mutated);
+    margin-bottom: 8px;
+}
+
+.portfolio-link-box a {
+    font-family: var(--font-en);
+    font-weight: 500;
+    word-break: break-all;
+}
+
+.copyright {
+    font-family: var(--font-en);
+    font-size: 0.85rem;
+    color: #9CA3AF;
+}
+
+/* =========================================================================
+   Responsive: Mobile (1-Column)
+   ========================================================================= */
+@media (max-width: 900px) {
+    .page-layout {
+        flex-direction: column;
+    }
+
+    .header-sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 40px 24px 20px;
+    }
+
+    .header-nav {
+        display: none;
+        /* Hide internal scroll nav on mobile for simplicity */
+    }
+
+    .content-main {
+        padding: 20px 24px 60px;
+    }
+
+    .structure-list {
+        grid-template-columns: 1fr;
+    }
+
+    .schedule-box {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        padding: 20px;
+    }
+
+    .proposal-card {
+        padding: 24px 20px;
+        margin-bottom: 20px;
+    }
+}
